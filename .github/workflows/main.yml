@@ -1,6 +1,7 @@
 name: signin
 
 on: 
+  workflow_dispatch:
   watch:
     types: [started]
   schedule:
