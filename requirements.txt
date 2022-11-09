@@ -9,4 +9,4 @@ python-Levenshtein
 pyppeteer
 pyppeteer_stealth
 chardet
-flexget==3.3.19
+flexget
