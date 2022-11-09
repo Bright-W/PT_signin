@@ -50,7 +50,7 @@ jobs:
           zip: ${{ secrets.zip }}
         run: |
           touch db-config.sqlite        
-          7z x -aoa -p$zip config.zip
+          7z x -aoa config.zip
           rm -f  config.zip
           cp -r  $GITHUB_WORKSPACE/.flexget/ ~/.flexget
           cp -r  config.yml ~/.flexget
@@ -73,7 +73,7 @@ jobs:
           cp -r ~/.flexget/db-config.sqlite $GITHUB_WORKSPACE
           cp -r ~/.flexget/config.yml $GITHUB_WORKSPACE
           cp -r ~/.flexget/*.log $GITHUB_WORKSPACE
-          zip -P $zip config.zip config.yml db-config.sqlite *.log
+          zip config.zip config.yml db-config.sqlite *.log
 
       - name: rm
         run: |
