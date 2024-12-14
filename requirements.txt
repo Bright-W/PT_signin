@@ -1,4 +1,4 @@
-python-telegram-bot==12.8
+python-telegram-bot
 brotli
 baidu-aip
 pandas
@@ -8,4 +8,4 @@ python-Levenshtein
 pyppeteer
 pyppeteer_stealth
 chardet
-flexget==3.12.2
+flexget
