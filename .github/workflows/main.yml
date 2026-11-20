@@ -15,13 +15,13 @@ jobs:
     steps:
     
       - name: Checkout data
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: ${{ secrets.DATA }}
           token: ${{ secrets.TOKEN }}
 
       - name: Checkout flexget_qbittorrent_mod repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: madwind/flexget_qbittorrent_mod
           path: .flexget/plugins
@@ -32,7 +32,7 @@ jobs:
           timezone: Asia/Shanghai
 
       - name: Set up Python #安装python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: 3.10.8
 
