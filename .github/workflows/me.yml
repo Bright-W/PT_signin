@@ -10,18 +10,18 @@ on:
    
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     
       - name: Checkout data
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: ${{ secrets.DATA }}
           token: ${{ secrets.TOKEN }}
 
       - name: Checkout flexget_qbittorrent_mod repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: Bright-W/flexget_qbittorrent_mod
           path: .flexget/plugins
@@ -32,7 +32,7 @@ jobs:
           timezone: Asia/Shanghai
 
       - name: Set up Python #安装python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
